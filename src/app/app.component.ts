@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  onRecipeClicked(recipeBool: string) {
+    console.log(recipeBool);
+  }
+
 }
