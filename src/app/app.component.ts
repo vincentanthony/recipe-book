@@ -6,9 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  recipeClicked = true;
+  shoppingClicked = false;
 
-  onRecipeClicked(recipeBool: string) {
-    console.log(recipeBool);
+  onNaviagte(feature: string) {
+    if (feature === 'recipe') {
+      this.recipeClicked = true;
+      this.shoppingClicked = false;
+    } else if (feature === 'shopping-list') {
+      this.shoppingClicked = true;
+      this.recipeClicked = false;
+    }
   }
 
 }
